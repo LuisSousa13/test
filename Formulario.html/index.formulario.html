@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #65a728;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label>Gênero:</label>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label>
+
+        <input type="radio" id="feminino" name="genero" value="feminino">
+        <label for="feminino">Feminino</label>
+
+        <input type="radio" id="outro" name="genero" value="outro">
+        <label for="outro">Outro</label>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="0" required>
+
+        <label for="estadoCivil">Estado Civil:</label>
+        <select id="estadoCivil" name="estadoCivil">
+            <option value="solteiro">Solteiro</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="viuvo">Viúvo</option>
+        </select>
+
+        <label>Hobbies:</label>
+        <input type="checkbox" id="leitura" name="hobbies" value="leitura">
+        <label for="leitura">Leitura</label>
+        <input type="checkbox" id="esporte" name="hobbies" value="esporte">
+        <label for="esporte">Esporte</label>
+        <input type="checkbox" id="musica" name="hobbies" value="musica">
+        <label for="musica">Música</label>
+
+        <label for="escolaridade">Nível de Escolaridade:</label>
+        <input type="text" id="escolaridade" name="escolaridade" required>
+
+        <label for="experiencia">Descrição da Experiência Profissional:</label>
+        <textarea id="experiencia" name="experiencia" rows="4" cols="50"></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
